@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .recommendation-box {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #38761d;
+            margin-bottom: 10px;
+        }
+        .crop-name {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #4a4a4a;
+            margin: 10px 0;
+        }
+        .confidence {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            flex-grow: 1;
+            margin: 0 5px;
+        }
+        .btn-secondary {
+            background-color: #666;
+            color: #fff;
+        }
+        .btn-secondary:hover {
+            background-color: #555;
+        }
+        .btn-primary {
+            background-color: #38761d; /* Green color */
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background-color: #275d15;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="recommendation-box">
+            <h2>Recommendation</h2>
+            <div class="prediction-info">
+                <p class="crop-name">{{ crop_emoji }} {{ crop_name }}</p>
+                <p class="confidence">Confidence: {{ confidence }}</p>
+                <p class="crop-description" style="margin-top: 15px; font-size: 1em; color: #333;">
+                    {{ crop_description }}
+                </p>
+                <p class="crop-details" style="margin-top: 10px; font-size: 0.9em; color: #666;">
+                    <strong>Season:</strong> {{ season }}<br>
+                    <strong>Harvest Time:</strong> {{ harvest_time }}
+                </p>
+                <div class="input-summary" style="margin-top: 20px; text-align: left; font-size: 0.9em; color: #555;">
+                    <h3 style="margin-bottom: 10px; color: #38761d;">Your Input Parameters:</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><strong>Nitrogen:</strong> {{ input_data['nitrogen'] }} kg/ha</li>
+                        <li><strong>Phosphorus:</strong> {{ input_data['phosphorus'] }} kg/ha</li>
+                        <li><strong>Potassium:</strong> {{ input_data['potassium'] }} kg/ha</li>
+                        <li><strong>Temperature:</strong> {{ input_data['temperature'] }} °C</li>
+                        <li><strong>Humidity:</strong> {{ input_data['humidity'] }} %</li>
+                        <li><strong>Soil pH:</strong> {{ input_data['ph'] }}</li>
+                        <li><strong>Rainfall:</strong> {{ input_data['rainfall'] }} mm</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        <div class="navigation-buttons">
+            <a href="/" class="btn btn-secondary">← Main Menu</a>
+            <a href="/" class="btn btn-primary">New Prediction</a>
+        </div>
+    </div>
+</body>
+</html>
