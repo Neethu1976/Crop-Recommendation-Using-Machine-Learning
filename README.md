@@ -12,10 +12,10 @@ This project is a Crop Recommendation System designed to help users determine th
 - Considers key parameters: Nitrogen (N), Phosphorus (P), Potassium (K), temperature, humidity, soil pH, and rainfall
 - User-friendly web interface with input forms and results display
 - Displays confidence scores for predictions, along with crop descriptions, seasons, harvest times, and emojis
-- Shows top 3 alternative crop suggestions with their confidence levels
 - Highlights key factors influencing the recommendation using feature importance analysis
 - Responsive design for desktop and mobile devices
 - Input validation and error handling
 - Logging for debugging and monitoring
 - Easily extensible for additional crops and features
+
 
