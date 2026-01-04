@@ -15,7 +15,7 @@ This project is a Crop Recommendation System designed to help users determine th
 - Highlights key factors influencing the recommendation using feature importance analysis
 - Responsive design for desktop and mobile devices
 - Input validation and error handling
-- Logging for debugging and monitoring
 - Easily extensible for additional crops and features
+
 
 
